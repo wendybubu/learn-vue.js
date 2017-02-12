@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue.js</title>
+</head>
+<body>
+<div id="app">
+    <p v-if="seen">seen</p>
+    <template v-if="ok">
+        <p>ok</p>
+    </template>
+</div>
+<script src="http://unpkg.com/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            seen: false,
+            ok: true
+        }
+    });
+</script>
+</body>
+</html>

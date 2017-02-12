@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue.js</title>
+<style>
+    .class1{
+        background-color: #000;
+        color: #ffffff;
+    }
+</style>
+</head>
+<body>
+<div id="app">
+    <label for="r1">修改颜色</label><input type="checkbox" v-model="class1" id="r1">
+    <br>
+    <br>
+    <div v-bind:class="{'class1': class1}">
+        directiva v-bind:class
+    </div>
+</div>
+<script src="http://unpkg.com/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            class1: false
+        }
+    });
+</script>
+</body>
+</html>
