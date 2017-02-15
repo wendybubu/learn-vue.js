@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue.js</title>
+</head>
+<body>
+<div id="app">
+    <p>{{ site }}</p>
+</div>
+<!--<script src="http://unpkg.com/vue/dist/vue.js"></script>-->
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            name: 'google',
+            url: 'http://www.google.com',
+//            site: 'google http://www.google.com'
+        },
+        computed: {
+            site: {
+                get:function () {
+                    return this.name + ' ' + this.url;
+                },
+                set: function (newValue) {
+                    var names = newValue.split(' ');
+                    this.name = names[0];
+                    this.url = names[1];
+                }
+            }
+        }
+    });
+    vm.site = 'runoob http://www.runoob.com';
+    document.write('name: ' + vm.name);
+    document.write('<br>');
+    document.write('url: ' + vm.url);
+</script>
+</body>
+</html>

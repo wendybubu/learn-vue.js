@@ -6,20 +6,21 @@
 </head>
 <body>
 <div id="app">
-    <p>{{message}}</p>
-    <button v-on:click="reverseMessage">反转字符串</button>
+    <p>原始字符串：{{message}}</p>
+    <p>反转字符串：{{reverseMessage}}</p>
 </div>
-<script src="http://unpkg.com/vue/dist/vue.js"></script>
+<!--<script src="http://unpkg.com/vue/dist/vue.js"></script>-->
+<script src="vue.js"></script>
 <script>
     new Vue({
         el: '#app',
         data: {
-            message: 'Runoob'
+            message: 'wendy'
         },
-        methods: {
+        computed: {
             reverseMessage: function () {
                 // this 指向 vm 实例
-                this.message = this.message.split('').reverse().join('');
+                return this.message.split('').reverse().join('');
             }
         }
     });
