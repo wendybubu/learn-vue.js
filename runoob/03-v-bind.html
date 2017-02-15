@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>vue.js</title>
 <style>
-    .class1{
+    .black{
         background-color: #000;
         color: #ffffff;
     }
@@ -12,10 +12,10 @@
 </head>
 <body>
 <div id="app">
-    <label for="r1">修改颜色</label><input type="checkbox" v-model="class1" id="r1">
+    <label for="r1">修改颜色</label><input type="checkbox" v-model="isActive" id="r1">
     <br>
     <br>
-    <div v-bind:class="{'class1': class1}">
+    <div v-bind:class="{'black': isActive}">
         directiva v-bind:class
     </div>
 </div>
@@ -24,7 +24,7 @@
     new Vue({
         el: '#app',
         data: {
-            class1: false
+            isActive: false
         }
     });
 </script>

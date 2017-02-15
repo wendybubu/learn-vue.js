@@ -6,14 +6,15 @@
 </head>
 <body>
 <div id="app">
-    <ol>
-        <li v-for="site in sites">
-            {{ site.name }}
-        </li>
-    </ol>
+    <ul>
+        <template v-for="site in sites">
+            <li>{{site.name}}</li>
+            <li>-------------</li>
+        </template>
+    </ul>
 </div>
 <!--<script src="http://unpkg.com/vue/dist/vue.js"></script>-->
-<script src="vue.js"></script>
+<script src="../vue.js"></script>
 <script>
     new Vue({
         el: '#app',

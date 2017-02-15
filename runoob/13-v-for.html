@@ -6,23 +6,23 @@
 </head>
 <body>
 <div id="app">
-    <ul>
-        <li v-for="(val, key, index) in items">
-            {{index}}. {{key}}: {{val}}
+    <ol>
+        <li v-for="site in sites">
+            {{ site.name }}
         </li>
-    </ul>
+    </ol>
 </div>
 <!--<script src="http://unpkg.com/vue/dist/vue.js"></script>-->
-<script src="vue.js"></script>
+<script src="../vue.js"></script>
 <script>
     new Vue({
         el: '#app',
         data: {
-            items: {
-                fruit: 'orange',
-                color: 'blue',
-                food: 'rice'
-            }
+            sites: [
+                {name: 'Runoob'},
+                {name: 'Google'},
+                {name: 'Taobao'}
+            ]
         }
     });
 </script>
