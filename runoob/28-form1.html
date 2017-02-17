@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue.js</title>
+</head>
+<body>
+<div id="app">
+    <p>input 元素：</p>
+    <input v-model.lazy="message" placeholder="编辑我……">
+    <p>消息是：{{ message }}</p>
+    <p>textarea 元素：</p>
+    <textarea v-model="message2" placeholder="请输入多行文本"></textarea>
+    <p style="white-space: pre;">{{ message2 }}</p>
+</div>
+<!--<script src="http://unpkg.com/vue/dist/vue.js"></script>-->
+<script src="../vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'wendy',
+            message2: 'hello\r\nworld'
+        }
+    });
+</script>
+</body>
+</html>

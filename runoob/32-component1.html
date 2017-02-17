@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue.js</title>
+</head>
+<body>
+<div id="app">
+    <wendy></wendy>
+</div>
+<!--<script src="http://unpkg.com/vue/dist/vue.js"></script>-->
+<script src="../vue.js"></script>
+<script>
+    Vue.component('wendy', {
+        template: '<h1>自定义组件——全局组件实例</h1>'
+    });
+    new Vue({
+        el: '#app'
+    });
+</script>
+</body>
+</html>

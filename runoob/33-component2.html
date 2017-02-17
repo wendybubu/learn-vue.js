@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue.js</title>
+</head>
+<body>
+<div id="app">
+    <wendy></wendy>
+    <bubu></bubu>
+</div>
+<!--<script src="http://unpkg.com/vue/dist/vue.js"></script>-->
+<script src="../vue.js"></script>
+<script>
+    var ChildWendy = {
+        template: '<h1>自定义组件——局部组件1</h1>'
+    };
+    var ChildBubu = {
+        template: '<p>自定义组件——局部组件2</p>'
+    };
+    new Vue({
+        el: '#app',
+        components: {
+            'wendy': ChildWendy,
+            'bubu': ChildBubu
+        }
+    });
+</script>
+</body>
+</html>
