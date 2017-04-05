@@ -7,16 +7,20 @@
 <body>
 <div id="app">
     <ol>
-        <li v-for="todo in todos">{{todo}}</li>
+        <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
     </ol>
 </div>
 <!--<script src="http://unpkg.com/vue/dist/vue.js"></script>-->
 <script src="../vue.js"></script>
 <script>
+    Vue.component('todo-item', {
+        props: ['todo'],
+        template: '<li>{{todo}}</li>'
+    });
     var app = new Vue({
         el: '#app',
         data: {
-            todos: ['item1', 'item2', 'item3']
+            groceryList: ['蔬菜', '奶酪', '其他']
         }
     });
 </script>

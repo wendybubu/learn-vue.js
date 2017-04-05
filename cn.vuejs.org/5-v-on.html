@@ -6,17 +6,21 @@
 </head>
 <body>
 <div id="app">
-    <ol>
-        <li v-for="todo in todos">{{todo}}</li>
-    </ol>
+    <p>{{message}}</p>
+    <button v-on:click="reverseMessage">逆转消息</button>
 </div>
 <!--<script src="http://unpkg.com/vue/dist/vue.js"></script>-->
 <script src="../vue.js"></script>
 <script>
     var app = new Vue({
         el: '#app',
-        data: {
-            todos: ['item1', 'item2', 'item3']
+        data:{
+            message: 'hello vue'
+        },
+        methods: {
+            reverseMessage: function () {
+                this.message = this.message.split('').reverse().join('');
+            }
         }
     });
 </script>
